@@ -47,3 +47,16 @@ ReasonOS should always preserve the history of how its understanding evolved.
 Current Understanding contains only agreed knowledge.
 
 Ideas, hypotheses, and unresolved discussions belong elsewhere.
+
+---
+
+## Repository Structure
+
+ReasonOS maintains a standardized proposal workflow.
+
+The repository includes:
+
+- `docs/proposals/`
+- `docs/templates/`
+
+Commit Proposals are used to document design changes consistently.
