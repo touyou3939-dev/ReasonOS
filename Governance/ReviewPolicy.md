@@ -1,6 +1,6 @@
 # Review Policy
 
-- Version: 1.1
+- Version: 1.2
 - Status: Approved
 
 ---
@@ -56,6 +56,28 @@ Review Policyは、ReasonOS Repositoryにおけるレビューの目的、対象
 - Consistency
 - Simplicity
 - Testability
+
+---
+
+# Responsibility Boundary
+
+ReviewPolicyは、
+Document変更やPromotion判断に必要なReview評価を定義する。
+
+管理対象:
+
+- Review Criteria
+- Review Process
+- Review Outcome
+- Change Classification
+
+以下は管理対象外とする。
+
+- Document状態の定義
+- Repository現在状態
+- Document Lifecycle
+
+これらは各責務を持つ別Documentで管理する。
 
 ---
 
@@ -138,15 +160,11 @@ Architecture Reviewは不要とする。
 
 Repository
 
-```text
-Reviews/
-```
+    Reviews/
 
 Plugin
 
-```text
-Plugins/<Plugin>/Reviews/
-```
+    Plugins/<Plugin>/Reviews/
 
 ---
 
