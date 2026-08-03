@@ -155,5 +155,32 @@ Governance Layer Version 1 completed.
 - PromotionPolicy.md
 - ReviewPolicy.md
 
----
-End of Session
+---## Session Log Output Rule
+
+Session Logおよびその他のMarkdown成果物を提示する場合、
+ユーザーがそのまま.mdファイルへコピーできる形式で提示する。
+
+### Rules
+
+- Markdown本文のみを提示する
+- 不要な識別子や内部情報を混入しない
+- 外側コードブロック内にMarkdownコードブロックを入れない
+- Markdown内の図表現は、コピー互換性を優先する
+- Mermaid等の表示依存形式を使用する場合は明示する
+
+### Diagram Representation
+
+標準形式:
+
+    1 Session = 1 Issue = 1 Conclusion
+
+    1 Issue
+        |
+        +-- N Documents
+                |
+                +-- N Reviews
+
+理由:
+
+- Git管理される.mdファイルとの互換性を維持するため
+- ChatGPTからのコピー時に構造崩れを防ぐため
