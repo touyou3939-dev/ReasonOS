@@ -115,3 +115,46 @@ Lifecycleの詳細は別ドキュメントで定義する。
 Repository RuleはMechanismである。
 
 Evidenceに基づいて継続的に改善する。
+
+# Naming Convention
+
+## Directories
+
+- PascalCase
+- Singular form
+- Responsibility-based name
+
+Examples
+
+- CandidateRegistry
+- Constitution
+- Governance
+- Kernel
+- Plugins
+
+## Documents
+
+General documents
+
+- PascalCase.md
+
+Examples
+
+- RepositoryRules.md
+- KernelArchitecture.md
+
+Constitution
+
+- NNN_Name.md
+
+Examples
+
+- 001_ReuseBeforeReinvent.md
+
+ADR
+
+- ADR-0001_Title.md
+
+RFC
+
+- RFC-0001_Title.md
