@@ -1,16 +1,18 @@
-# Review Policy
+# Promotion Policy
 
 - Version: 1.0
-- Status: Draft
+- Status: Approved
 
 ---
 
 # Purpose
 
-Review Policyは、ReasonOS Repositoryにおけるレビューの目的、対象、基準、および運用ルールを定義する。
+Promotion Policyは、ReasonOS Repositoryにおいて、
+DraftまたはReview状態の成果物をApprovedへ昇格（Promotion）するための基準と手順を定義する。
 
-レビューの目的は成果物の承認ではなく、
-品質の継続的な向上である。
+Promotionは単なる完成宣言ではない。
+
+Repository全体の品質、一貫性、保守性を維持するためのGovernance Processである。
 
 ---
 
@@ -27,96 +29,109 @@ Review Policyは、ReasonOS Repositoryにおけるレビューの目的、対象
 - ADR
 - RFC
 - Templates
+- Reviews
 
 ---
 
-# Review Principles
+# Promotion Principles
 
-レビューは以下の原則に従う。
+Promotionは以下の原則に従う。
 
-- Responsibility First
-- Consistency First
-- Simplicity First
-- Reusability First
-- Evidence First
+## Responsibility First
 
-レビューは設計者ではなく、
-成果物を対象とする。
+成果物の責務が明確であること。
+
+既存成果物との責務重複がないこと。
 
 ---
 
-# Review Objectives
+## Consistency First
 
-レビューでは次の観点を確認する。
-
-- Purpose
-- Responsibility
-- Universality
-- Stability
-- Consistency
-- Simplicity
-- Testability
+Repository内の既存ルール・設計思想と整合していること。
 
 ---
 
-# Mandatory Reviews
+## Evidence First
 
-以下はArchitecture Reviewを必須とする。
+判断は根拠に基づいて行うこと。
 
-- Constitution
-- Governance Specifications
-- Kernel
-- Plugin README
-- Framework README
-- Glossary
-
-その他は必要に応じて実施する。
+単なる完成感ではなく、Review結果を基準とする。
 
 ---
 
-# Review Outcomes
+## Review Before Promotion
 
-レビュー結果は次のいずれかとする。
+正式採用前に必要なReviewを完了すること。
+
+---
+
+# Promotion Criteria
+
+成果物は以下の条件を満たした場合にPromotion可能となる。
+
+---
+
+## 1. Responsibility
+
+成果物の目的と責務が明確である。
+
+以下を満たすこと。
+
+- Purposeが定義されている
+- Scopeが明確である
+- 他成果物との責務境界が明確である
+
+---
+
+## 2. Completeness
+
+成果物として必要な内容が完成している。
+
+以下を含む。
+
+- 未完成項目が存在しない
+- TODOが残っていない
+- 必要な関連情報が記載されている
+
+---
+
+## 3. Consistency
+
+Repository全体との整合性が確認されている。
+
+確認対象
+
+- Repository Rules
+- Document Lifecycle
+- Naming Convention
+- Architecture Principles
+
+---
+
+## 4. Review Completion
+
+必要なReviewが完了している。
+
+Review結果は以下のいずれかであること。
 
 - Approved
 - Approved with Minor Revision
-- Revision Required
+
+Revision Requiredの場合はPromotionできない。
 
 ---
 
-# Review Records
+## 5. Lifecycle Compliance
 
-レビュー結果はRepositoryへ保存する。
-
-保存場所はRepository RulesのScope Ruleに従う。
-
-例
-
-Repository全体
-
-```
-Reviews/
-```
-
-Plugin
-
-```
-Plugins/<Plugin>/Reviews/
-```
+Document Lifecycleで定義された状態遷移に従っていること。
 
 ---
 
-# Continuous Improvement
+# Promotion Procedure
 
-Review PolicyはMechanismである。
+Promotionは以下の手順で実施する。
 
-運用を通じてEvidenceを蓄積し、
-継続的に改善する。
+```text
+Draft
 
----
-
-# Related Documents
-
-- Governance/RepositoryRules.md
-- Governance/DocumentLifecycle.md
-- Templates/ArchitectureReviewTemplate.md
+ ↓
