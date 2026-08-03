@@ -1,13 +1,13 @@
 # Document Lifecycle
 
-- Version: 1.1
+- Version: 1.2
 - Status: Approved
 
 ---
 
 # Purpose
 
-Document Lifecycleは、ReasonOS Repositoryで管理されるドキュメントの共通Lifecycleを定義する。
+DocumentLifecycleは、ReasonOS Repositoryで管理されるドキュメントの共通Lifecycleを定義する。
 
 目的は、
 
@@ -38,6 +38,27 @@ Document Lifecycleは、ReasonOS Repositoryで管理されるドキュメント�
 - RFC
 - Reviews
 - Templates
+
+---
+
+# Responsibility
+
+DocumentLifecycleは、
+Document状態の定義のみを管理する。
+
+管理対象:
+
+- Document State Definition
+- Common Lifecycle Model
+- State Transition Concept
+
+以下は管理対象外とする。
+
+- Review基準
+- Repository状態一覧
+- Promotion判断
+
+これらは各責務を持つ別Documentで管理する。
 
 ---
 
@@ -102,63 +123,108 @@ Repository標準の成果物として扱う。
 
 ## Constitution
 
-```text
 Draft
-    ↓
+
+↓
+
 Review
-    ↓
+
+↓
+
 Approved
-    ↓
+
+↓
+
 Superseded
-    ↓
+
+↓
+
 Archived
-```
 
 ---
 
 ## ADR
 
-```text
 Draft
-    ↓
+
+↓
+
 Review
-    ↓
+
+↓
+
 Approved
-    ↓
+
+↓
+
 Superseded
-    ↓
+
+↓
+
 Archived
-```
 
 ---
 
 ## RFC
 
-```text
 Draft
-    ↓
+
+↓
+
 Discussion
-    ↓
+
+↓
+
 Accepted
-    ↓
+
+↓
+
 Closed
-```
 
 ---
 
 ## Plugin Documents
 
-```text
 Draft
-    ↓
+
+↓
+
 Review
-    ↓
+
+↓
+
 Approved
-    ↓
+
+↓
+
 Superseded
-    ↓
+
+↓
+
 Archived
-```
+
+---
+
+# Relationship with Other Governance Documents
+
+DocumentLifecycleは、
+Repository Governance Layerの一部として機能する。
+
+責務分担:
+
+RepositoryManifest
+
+- Repositoryの現在状態を記録する
+- Document Statusを表示する
+
+ReviewPolicy
+
+- Review基準を定義する
+- 状態変更の妥当性を評価する
+
+DocumentLifecycle
+
+- Document状態の意味を定義する
 
 ---
 
@@ -170,4 +236,12 @@ Archived
 ただし、
 
 - 共通Stateを変更しない。
-```
+- 既存Stateで表現できる場合、新しいStateを追加しない。
+
+---
+
+# Related Documents
+
+- Governance/ReviewPolicy.md
+- RepositoryManifest.md
+- Governance/RepositoryRules.md
