@@ -194,7 +194,6 @@ Repository規模拡大時に、
 
 # Next Session
 
-- RepositoryRules.md v1.1正式反映
 - DocumentLifecycle.md / ReviewPolicy.md / RepositoryManifest.mdの責務整理
 - Document Metadata設計検討
 
