@@ -176,3 +176,15 @@ ReasonOSは以下を提供しない。
 # License
 
 To be decided.
+
+## Conversation Policy
+
+Chatは永続的に利用しない。
+
+一区切りの成果物が完成したら、
+
+Repositoryへ反映し、
+
+次の作業は新しいConversationで開始する。
+
+Repository Manifestを共通コンテキストとして利用する。
