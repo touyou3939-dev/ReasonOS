@@ -1,40 +1,45 @@
 # Repository Manifest
 
-- Version: 1.1
+- Version: 1.0
 - Status: Approved
-- Last Updated: YYYY-MM-DD
+- Last Updated: 2026-08-03
 
 ---
 
 # Purpose
 
-Repository Manifestは、ReasonOS Repositoryの現在の公式状態（Current State）を記録する。
+Repository ManifestはReasonOS Repositoryの現在の公式状態（Current State）を記録する。
 
-目的は、
+目的は以下の通りである。
 
-- Repository全体の現在地を把握すること
-- Repository構造を一貫して管理すること
-- 新しい開発セッションへ共通コンテキストを提供すること
+- Repository全体の現在地を把握する。
+- Repository構造を一貫して管理する。
+- 新しい開発セッションに共通コンテキストを提供する。
+- Repositoryの唯一の正本（Single Source of Truth）への入口となる。
 
 Repository Manifestは設計仕様ではない。
 
-Repositoryの現在状態を表現するためのインデックスである。
+Repositoryの現在状態を表現するインデックスである。
 
 ---
 
-# Manifest Principles
+# Repository Principles
 
-Repository Manifestは、
+Repository ManifestはRepositoryの現在状態のみを管理する。
 
-Repositoryの「現在状態(Current State)」のみを管理する。
+以下は管理対象外とする。
 
-Repositoryの設計、運用ルール、開発計画は管理対象外とする。
+- 設計仕様
+- 開発計画
+- タスク管理
+- Current Focus
+- Next Recommended Action
+
+これらはそれぞれ責務を持つ成果物で管理する。
 
 ---
 
 # Current Repository Structure
-
-現在のRepository構造
 
 ```text
 ReasonOS/
@@ -63,10 +68,6 @@ ReasonOS/
 
 - ConstitutionCandidates.md
 
-### Categories
-
-- Constitution Candidates
-
 ---
 
 ## Constitution
@@ -83,11 +84,11 @@ ReasonOS/
 
 - RepositoryRules.md
 - DocumentLifecycle.md
+- ReviewPolicy.md
 - NamingConvention.md
 
 ### Draft
 
-- ReviewPolicy.md
 - PromotionPolicy.md
 
 ---
@@ -127,11 +128,39 @@ ReasonOS/
 
 ---
 
-# Manifest Generation
+# Authoritative Sources
 
-Repository Manifestは将来的にRepositoryから自動生成されることを前提とする。
+Repository ManifestはRepositoryの入口である。
 
-Version 1では手動管理とする。
+Repositoryの正式な情報は各成果物を正本とする。
+
+| Information | Authoritative Source |
+|-------------|----------------------|
+| Repository Structure | RepositoryRules.md |
+| Document Lifecycle | DocumentLifecycle.md |
+| Review Rules | ReviewPolicy.md |
+| Naming Convention | NamingConvention.md |
+| Architecture | KernelArchitecture.md |
+| Constitution | Constitution/ |
+| Candidates | CandidateRegistry/ |
+
+Repository Manifestは各成果物へのインデックスであり、
+正本を置き換えるものではない。
+
+---
+
+# Manifest Maintenance
+
+Repository ManifestはVersion 1では手動管理とする。
+
+将来的にはReasonOS DevKitにより自動生成する。
+
+Manifestの更新は以下に従う。
+
+- Repositoryの状態変更はContent Updateとする。
+- Manifestの責務変更はStructure Changeとする。
+
+Change ClassificationはReviewPolicy.mdに従う。
 
 ---
 
@@ -140,3 +169,4 @@ Version 1では手動管理とする。
 - README.md
 - Governance/RepositoryRules.md
 - Governance/DocumentLifecycle.md
+- Governance/ReviewPolicy.md
