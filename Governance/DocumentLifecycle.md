@@ -1,0 +1,173 @@
+# Document Lifecycle
+
+- Version: 1.1
+- Status: Approved
+
+---
+
+# Purpose
+
+Document Lifecycleは、ReasonOS Repositoryで管理されるドキュメントの共通Lifecycleを定義する。
+
+目的は、
+
+- ドキュメントの成熟度を明確にすること
+- Repository全体の運用を統一すること
+- 長期的な保守性を向上させること
+
+である。
+
+本ドキュメントは共通Lifecycleのみを定義する。
+
+各ドキュメント種別固有のLifecycleは、
+必要に応じて各カテゴリの仕様書で定義する。
+
+---
+
+# Scope
+
+本LifecycleはRepository全体へ適用する。
+
+対象例
+
+- Constitution
+- Governance
+- Kernel
+- Plugins
+- ADR
+- RFC
+- Reviews
+- Templates
+
+---
+
+# Lifecycle Principles
+
+- Lifecycleはドキュメントの状態を表す。
+- 状態はRepository全体で一貫した意味を持つ。
+- 必要最小限の状態のみを定義する。
+- 既存の状態で表現できる場合は、新しい状態を追加しない。
+
+---
+
+# Common States
+
+## Draft
+
+作成中。
+
+内容は変更される可能性がある。
+
+---
+
+## Review
+
+レビュー中。
+
+正式採用前の状態。
+
+---
+
+## Approved
+
+正式に採用された状態。
+
+Repository標準の成果物として扱う。
+
+---
+
+## Superseded
+
+新しい成果物によって置き換えられた状態。
+
+履歴として保持する。
+
+---
+
+## Archived
+
+保守対象外。
+
+履歴保存のみを目的とする。
+
+---
+
+# Reference Lifecycles
+
+以下は代表例である。
+
+詳細なLifecycleは各カテゴリの仕様書で定義できる。
+
+---
+
+## Constitution
+
+```text
+Draft
+    ↓
+Review
+    ↓
+Approved
+    ↓
+Superseded
+    ↓
+Archived
+```
+
+---
+
+## ADR
+
+```text
+Draft
+    ↓
+Review
+    ↓
+Approved
+    ↓
+Superseded
+    ↓
+Archived
+```
+
+---
+
+## RFC
+
+```text
+Draft
+    ↓
+Discussion
+    ↓
+Accepted
+    ↓
+Closed
+```
+
+---
+
+## Plugin Documents
+
+```text
+Draft
+    ↓
+Review
+    ↓
+Approved
+    ↓
+Superseded
+    ↓
+Archived
+```
+
+---
+
+# Extension Rule
+
+各カテゴリは、
+共通Lifecycleを維持したまま必要に応じて固有の状態を追加できる。
+
+ただし、
+
+- 共通Stateを変更しない。
+```
