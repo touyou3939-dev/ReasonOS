@@ -1,6 +1,6 @@
 # Repository Manifest
 
-- Version: 1.0
+- Version: 1.1
 - Status: Approved
 - Last Updated: 2026-08-03
 
@@ -39,24 +39,42 @@ Repository ManifestはRepositoryの現在状態のみを管理する。
 
 ---
 
+# Responsibility Boundary
+
+RepositoryManifestはRepositoryの現在状態を記録する。
+
+管理対象:
+
+- Repository Structure
+- Document Status
+- Current Repository State
+
+以下は管理対象外とする。
+
+- Lifecycle定義
+- Reviewルール
+- 設計仕様
+
+これらは各責務を持つ別Documentで管理する。
+
+---
+
 # Current Repository Structure
 
-```text
-ReasonOS/
+    ReasonOS/
 
-├── README.md
+    ├── README.md
 
-├── CandidateRegistry/
-├── Constitution/
-├── Governance/
-├── Kernel/
-├── Plugins/
+    ├── CandidateRegistry/
+    ├── Constitution/
+    ├── Governance/
+    ├── Kernel/
+    ├── Plugins/
 
-├── ADR/
-├── RFC/
-├── Reviews/
-├── Templates/
-```
+    ├── ADR/
+    ├── RFC/
+    ├── Reviews/
+    ├── Templates/
 
 ---
 
