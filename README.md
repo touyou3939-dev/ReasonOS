@@ -1,57 +1,33 @@
 # ReasonOS
 
-ReasonOS is a repository for designing, evolving, and validating a reasoning architecture.
+> A plugin-driven operating system for continuously improving decision quality.
 
-Rather than implementing software first, this repository focuses on designing the principles, concepts, and processes that enable high-quality reasoning.
+---
+
+# Vision
+
+ReasonOSは、意思決定能力を継続的に進化させるためのプラットフォームである。
+
+ReasonOS自身はドメイン知識を持たない。
+
+商品開発・株式投資・経営戦略などの知識はPluginとして実装される。
+
+---
+
+# Philosophy
+
+ReasonOSは次の考え方を採用する。
+
+- Small Kernel
+- Plugin Driven Development
+- Evidence First
+- Reuse Before Reinvent
+
+これらの原則はConstitutionによって管理される。
 
 ---
 
 # Repository Structure
 
 ```
-docs/
-```
-
-| File | Purpose |
-|------|---------|
-| Current Understanding.md | The current agreed design of ReasonOS. |
-| Open Questions.md | Questions that remain unresolved. |
-| Development Process.md | The process for evolving ReasonOS. |
-| Change Log.md | A chronological history of accepted changes. |
-| Design Retrospectives.md | Lessons learned from design decisions. |
-
----
-
-# Design Principles
-
-ReasonOS follows several fundamental principles.
-
-1. Current Understanding is the single source of truth.
-
-2. Concepts represent responsibilities.
-
-3. Open Questions are preserved until resolved.
-
-4. Design evolves through explicit discussion.
-
-5. Every accepted change is recorded.
-
----
-
-# Development Flow
-
-```
-Observation
-        ↓
-Discussion
-        ↓
-Commit Proposal
-        ↓
-Current Understanding
-```
-
----
-
-# Goal
-
-The long-term goal of ReasonOS is to establish a reusable architecture for high-quality reasoning.
+ReasonOS/
