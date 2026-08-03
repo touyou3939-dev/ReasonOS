@@ -1,7 +1,7 @@
 # Repository Rules
 
-- Version: 1.0
-- Status: Draft
+- Version: 1.1
+- Status: Approved
 
 ---
 
@@ -14,6 +14,7 @@ Repository Rulesは、ReasonOS Repository全体の運用ルールを定義する
 - Repository構造の一貫性を保つこと
 - 成果物の責務を明確にすること
 - ドキュメントの配置ルールを統一すること
+- Repository変更プロセスを一貫して管理すること
 
 である。
 
@@ -110,11 +111,137 @@ Lifecycleの詳細は別ドキュメントで定義する。
 
 ---
 
+# Issue Driven Development
+
+ReasonOSの開発はIssueを中心に管理する。
+
+Issueは解決すべき問題または改善対象を定義する単位であり、
+Repository変更の目的を明確化する。
+
+---
+
+## Development Session
+
+Development Sessionは、
+1つのIssueを解決するための作業単位である。
+
+原則として以下の関係を持つ。
+
+```
+1 Session = 1 Issue = 1 Conclusion
+```
+
+ただし、Issueを解決するための変更対象DocumentおよびReviewは複数存在してよい。
+
+---
+
+## Issue and Document Relationship
+
+1つのIssueは複数のDocument変更を含むことができる。
+
+例:
+
+```
+Issue
+
+    ↓
+
+Change Target
+
+    ├── Document A
+    │
+    ├── Document B
+    │
+    └── Document C
+
+    ↓
+
+Review
+
+    ↓
+
+Issue Close
+```
+
+IssueとDocumentは1対1ではなく、
+Issueは変更対象Documentを束ねる上位概念として扱う。
+
+---
+
+## Review Relationship
+
+ReviewはDocument単位で実施する。
+
+理由:
+
+- Documentごとに責務が異なるため
+- Version管理がDocument単位で行われるため
+- 変更履歴を追跡可能にするため
+
+したがって、
+
+```
+1 Issue
+
+    ↓
+
+N Documents
+
+    ↓
+
+N Reviews
+```
+
+となる。
+
+---
+
+## Issue Completion Criteria
+
+Issueは以下を満たした場合にCloseする。
+
+- Issueの目的が達成された
+- 必要なDocument変更が完了した
+- 対象DocumentのReviewが完了した
+- Repository状態が更新された
+
+---
+
+## Relationship with Proposal
+
+ProposalはIssueを解決するための設計案である。
+
+ProposalはIssueそのものではなく、
+Issue解決過程で必要に応じて作成される。
+
+```
+Issue
+
+    ↓
+
+Proposal (必要な場合)
+
+    ↓
+
+Implementation
+
+    ↓
+
+Review
+```
+
+単純な変更の場合、
+Proposalを作成せずIssue内で完結してよい。
+
+---
+
 # Future Extension
 
 Repository RuleはMechanismである。
 
 Evidenceに基づいて継続的に改善する。
+
+---
 
 # Naming Convention
 
@@ -131,6 +258,8 @@ Examples
 - Governance
 - Kernel
 - Plugins
+
+---
 
 ## Documents
 
