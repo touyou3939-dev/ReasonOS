@@ -86,9 +86,6 @@ ReasonOS/
 - DocumentLifecycle.md
 - ReviewPolicy.md
 - NamingConvention.md
-
-### Draft
-
 - PromotionPolicy.md
 
 ---
@@ -117,14 +114,14 @@ ReasonOS/
 
 | Item | Count |
 |------|------:|
-| Approved Documents | |
-| Draft Documents | |
-| Constitution | |
-| Governance | |
-| Kernel Documents | |
-| Plugins | |
-| ADR | |
-| RFC | |
+| Approved Documents | 8 |
+| Draft Documents | 0 |
+| Constitution | 1 |
+| Governance | 5 |
+| Kernel Documents | 1 |
+| Plugins | 1 |
+| ADR | 0 |
+| RFC | 0 |
 
 ---
 
