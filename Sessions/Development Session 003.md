@@ -204,10 +204,6 @@ Repository規模拡大時に、
 Governance Layerについて、
 Issue Driven Developmentの基本方針を整理した。
 
-RepositoryRules.md v1.1はReview完了状態。
-
-正式なStatus更新は次Sessionで実施する。
-
 ---
 
 # Lessons Learned
