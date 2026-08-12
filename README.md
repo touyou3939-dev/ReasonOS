@@ -29,16 +29,20 @@ ReasonOSは次の考え方を採用する。
 
 # Repository Structure
 
-```text
+```
 ReasonOS/
 
+├── CandidateRegistry/
 ├── Constitution/
+├── Governance/
 ├── Kernel/
+├── Plugins/
+├── Sessions/
 ├── ADR/
 ├── RFC/
-├── Templates/
 ├── Reviews/
-└── ProductInvestment/
+├── Templates/
+└── docs/            (Legacy Archive - 詳細はRepository Manifest参照)
 ```
 
 ---
@@ -119,7 +123,7 @@ Lifecycleの詳細仕様は、
 
 # Development Process
 
-```text
+```
 Idea
     │
     ▼
