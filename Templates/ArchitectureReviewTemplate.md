@@ -1,6 +1,6 @@
 # Architecture Review Template
 
-- Template Version: 1.0
+- Template Version: 1.1
 - Status: Approved
 
 ---
@@ -88,5 +88,90 @@ ReasonOS全体で利用できる設計になっているか。
 
 ### Objective
 
-他のConstitution・Kernel・
-```
+他のConstitution・Kernel・Governance（Repository Rules / Review Policy / Document Lifecycle等）の既存ルールと矛盾していないか。
+
+### Checklist
+
+- [ ] 既存のConstitutionと矛盾しない
+- [ ] Kernelの設計思想と一致している
+- [ ] Governanceの既存ルールと矛盾しない
+
+### Review Comments
+
+---
+
+## 6. Simplicity
+
+### Objective
+
+構成・記述が必要以上に複雑になっていないか。
+
+### Checklist
+
+- [ ] 不要な概念を含まない
+- [ ] 構成がシンプルである
+- [ ] 目的達成に必要な最小限の内容である
+
+### Review Comments
+
+---
+
+## 7. Testability
+
+### Objective
+
+原則・設計の妥当性を、実際のPlugin実装やDocument運用を通じて検証できるか。
+
+### Checklist
+
+- [ ] Plugin実装を通じて検証できる
+- [ ] 妥当性を判断する基準が明確である
+- [ ] 再レビュー時に効果を確認できる
+
+### Review Comments
+
+---
+
+# Review Summary
+
+## Strengths
+
+---
+
+## Concerns
+
+---
+
+## Improvement Suggestions
+
+---
+
+# Final Decision
+
+| Item | Result |
+|------|--------|
+| Purpose | |
+| Responsibility | |
+| Universality | |
+| Stability | |
+| Consistency | |
+| Simplicity | |
+| Testability | |
+
+---
+
+# Overall Result
+
+Approved / Approved with Minor Revision / Revision Required
+
+---
+
+# Next Action
+
+---
+
+# Related Documents
+
+- Governance/ReviewPolicy.md
+- Governance/DocumentLifecycle.md
+- RepositoryManifest.md
