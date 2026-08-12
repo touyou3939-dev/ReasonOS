@@ -1,6 +1,6 @@
 # Repository Manifest
 
-- Version: 1.3
+- Version: 1.4
 - Status: Draft
 - Last Updated: 2026-08-12
 
@@ -139,10 +139,11 @@ Sessions/ はDevelopment Session記録を格納する。Conversation Context相�
 
 ### Draft
 
-- ADR-0002_ReasonOSDevelopmentStrategy.md（本Sessionで本文起票。Architecture Review未実施のため次Sessionへ持ち越し）
 
 ### Approved
 
+- ADR-0001_SeparateArchitectureReviewAndPromotionEvaluation.md
+- ADR-0002_ReasonOSDevelopmentStrategy.md（Session 009でArchitecture Review実施、Approved with Minor Revisionを反映しv1.1でApproved昇格）
 
 ---
 
@@ -152,23 +153,27 @@ Sessions/ はDevelopment Session記録を格納する。Conversation Context相�
 
 | Item | Count |
 |------|------:|
-| Approved Documents | 12 |
-| Draft Documents | 1 |
+| Approved Documents | 14 |
+| Draft Documents | 0 |
 | Constitution | 2 |
 | Governance | 5 |
 | Kernel Documents | 1 |
 | Plugins（製品数） | 1 |
 | Plugins配下承認文書数 | 3 |
-| ADR | 1 (Draft) |
+| ADR | 2 (Approved) |
 | RFC | 0 |
 
-Note: v1.2からの変更点は以下の通り。
+Note: v1.3からの変更点は以下の通り。
 
-- Approved Documents集計基準を「カテゴリ内訳の単純合計（Plugins=1扱い）」から「実文書数の積み上げ」に変更（10→12）。
-- Current Repository StructureにSessions/を追加。
-- ADR-0002_ReasonOSDevelopmentStrategy.mdの本文を起票し、Status: Draftとして登録（Draft Documents 0→1、ADR 0→1）。
+- ADR-0001_SeparateArchitectureReviewAndPromotionEvaluation.md（Status: Approved）がRepository内に既に存在していたにもかかわらず、v1.3までADRセクションへ未登録だったため追加登録した（登録漏れの是正）。
+- ADR-0002_ReasonOSDevelopmentStrategy.mdのArchitecture Reviewを実施し、Approved with Minor Revisionの指摘を反映のうえv1.1へ改訂、Draft→Approvedへ昇格した。
+- 上記2件の反映により、Approved Documents 12→14、Draft Documents 1→0、ADR「1 (Draft)」→「2 (Approved)」に変更。
 
-Note: README.mdのRepository Structureセクション（Constitution/, Kernel/, ADR/, RFC/, Templates/, Reviews/, ProductInvestment/という旧構造の記載）が、本Manifestの記述と一致していない既知の乖離が残存している。本Updateではスコープ外とし、Next Session Issueとして記録する。
+Note: README.mdのRepository Structureセクション（Constitution/, Kernel/, ADR/, RFC/, Templates/, Reviews/, ProductInvestment/という旧構造の記載）が、本Manifestの記述と一致していない既知の乖離が残存している。引き続きNext Session Issueとして記録する。
+
+Note: Session 009にて、Plugins/ADR/ADR-0001_Replace Stage with Method in Product Investment Framework.md（ファイル名はADR-0001だが本文見出しはADR-0002、格納先もGovernance/NamingConvention.mdが定める`Plugins/<Plugin>/ADR/`ではなく`Plugins/ADR/`直下）という命名・格納規則不整合を新たに発見した。本Updateではスコープ外とし、Next Session Issueとして記録する。
+
+Note: Session 009にて、Constitution/001_ReuseBeforeReinvent.md・Constitution/README.md・Plugins/ProductInvestment/README.mdの3文書について、実文書ヘッダーのStatusが「Draft」であるにもかかわらず、本Manifest上は「Approved」として扱われている不整合を新たに発見した（001はArchitecture Review結果が"Approved with Minor Revision"のまま文書ヘッダーへ未反映と見られる）。本Updateではスコープ外とし、Next Session Issueとして記録する。上記3文書の集計上の扱い（Constitution: 2, Plugins配下承認文書数: 3への算入）は、次Session確認まで暫定的に現状維持する。
 
 ---
 
