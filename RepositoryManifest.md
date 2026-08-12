@@ -1,8 +1,8 @@
 # Repository Manifest
 
-- Version: 1.1
+- Version: 1.2
 - Status: Approved
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-12
 
 ---
 
@@ -92,11 +92,11 @@ RepositoryManifestはRepositoryの現在状態を記録する。
 
 ### Draft
 
-- 001_ReuseBeforeReinvent.md
-- README.md
 
 ### Approved
 
+- 001_ReuseBeforeReinvent.md
+- README.md
 
 ---
 
@@ -136,7 +136,7 @@ RepositoryManifestはRepositoryの現在状態を記録する。
 
 | Item | Count |
 |------|------:|
-| Approved Documents | 8 |
+| Approved Documents | 10 |
 | Draft Documents | 0 |
 | Constitution | 1 |
 | Governance | 5 |
@@ -144,6 +144,8 @@ RepositoryManifestはRepositoryの現在状態を記録する。
 | Plugins | 1 |
 | ADR | 0 |
 | RFC | 0 |
+
+Note: Approved Documents / Plugins の集計基準には既知の乖離（Plugins配下の個別Document数が反映されていない等）が残存している。修正はSessions/Development Session 006.mdで既にNext Session Issue（RepositoryManifestの構造乖離修正）として記録済みであり、本Updateではスコープ外とした。
 
 ---
 
