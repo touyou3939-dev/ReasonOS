@@ -90,9 +90,13 @@ RepositoryManifestはRepositoryの現在状態を記録する。
 
 ## Constitution
 
-### Approved
+### Draft
 
 - 001_ReuseBeforeReinvent.md
+- README.md
+
+### Approved
+
 
 ---
 
