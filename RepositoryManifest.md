@@ -1,7 +1,7 @@
 # Repository Manifest
 
-- Version: 1.2
-- Status: Approved
+- Version: 1.3
+- Status: Draft
 - Last Updated: 2026-08-12
 
 ---
@@ -70,11 +70,14 @@ RepositoryManifestはRepositoryの現在状態を記録する。
     ├── Governance/
     ├── Kernel/
     ├── Plugins/
+    ├── Sessions/
 
     ├── ADR/
     ├── RFC/
     ├── Reviews/
     ├── Templates/
+
+Sessions/ はDevelopment Session記録を格納する。Conversation Context相当であり、正本文書ではないため、Document Status集計の対象外とする。
 
 ---
 
@@ -132,20 +135,40 @@ RepositoryManifestはRepositoryの現在状態を記録する。
 
 ---
 
+## ADR
+
+### Draft
+
+- ADR-0002_ReasonOSDevelopmentStrategy.md（本Sessionで本文起票。Architecture Review未実施のため次Sessionへ持ち越し）
+
+### Approved
+
+
+---
+
 # Repository Summary
+
+集計基準: 「Approved Documents」はカテゴリ別の実承認文書数の単純合計とする。Plugins配下の個別文書数は「Plugins配下承認文書数」として別行に記載し、「Plugins」行は製品数を表す。
 
 | Item | Count |
 |------|------:|
-| Approved Documents | 10 |
-| Draft Documents | 0 |
-| Constitution | 1 |
+| Approved Documents | 12 |
+| Draft Documents | 1 |
+| Constitution | 2 |
 | Governance | 5 |
 | Kernel Documents | 1 |
-| Plugins | 1 |
-| ADR | 0 |
+| Plugins（製品数） | 1 |
+| Plugins配下承認文書数 | 3 |
+| ADR | 1 (Draft) |
 | RFC | 0 |
 
-Note: Approved Documents / Plugins の集計基準には既知の乖離（Plugins配下の個別Document数が反映されていない等）が残存している。修正はSessions/Development Session 006.mdで既にNext Session Issue（RepositoryManifestの構造乖離修正）として記録済みであり、本Updateではスコープ外とした。
+Note: v1.2からの変更点は以下の通り。
+
+- Approved Documents集計基準を「カテゴリ内訳の単純合計（Plugins=1扱い）」から「実文書数の積み上げ」に変更（10→12）。
+- Current Repository StructureにSessions/を追加。
+- ADR-0002_ReasonOSDevelopmentStrategy.mdの本文を起票し、Status: Draftとして登録（Draft Documents 0→1、ADR 0→1）。
+
+Note: README.mdのRepository Structureセクション（Constitution/, Kernel/, ADR/, RFC/, Templates/, Reviews/, ProductInvestment/という旧構造の記載）が、本Manifestの記述と一致していない既知の乖離が残存している。本Updateではスコープ外とし、Next Session Issueとして記録する。
 
 ---
 
