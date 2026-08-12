@@ -131,9 +131,22 @@ None
 
 # Next Session
 
-Trigger条件成立時までDocument Metadataに関する作業は行わない。
+Constitution関連の空ファイル対応。
 
-次回セッションのテーマは別途設定する。
+具体的には、Status: Approvedでありながら本文が空である
+`Constitution/001_ReuseBeforeReinvent.md`（および`Constitution/README.md`）について、
+PromotionPolicy.mdのCompleteness基準との整合性を確認し、対応方針を決定する。
+
+Document Metadataに関する作業は、Decision 002のTrigger条件成立時まで行わない。
+
+なお、本Session内で他にも以下の未解決事項を検出しており、
+Constitution対応の後、以下の優先順位で着手を検討する。
+
+1. Constitution関連の空ファイル対応（次回実施）
+2. RepositoryManifest.mdの構造乖離修正（Sessions/フォルダ未記載、ADR-0002空ファイル）
+3. docs/フォルダの正式な扱い（Archive化・Manifest除外等）
+4. Knowledge Navigation方式の検討（Session 003 Open Question）
+5. Governance Document間のRelationship管理方法（Session 003 Open Question）
 
 ---
 
