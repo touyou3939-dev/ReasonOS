@@ -1,7 +1,7 @@
 # ADR-0002: ReasonOS Development Strategy
 
-- Status: Draft
-- Version: 1.0
+- Status: Approved
+- Version: 1.1
 - Last Updated: 2026-08-12
 
 ---
@@ -12,7 +12,7 @@ ReasonOSはSmall Kernel、Plugin Driven Development、Evidence First、Reuse Bef
 
 本ADRは、README.mdに既に記載されているDevelopment Processの流れ（Idea → RFC → Plugin Implementation → Architecture Review → ADR → Kernel Feedback → Constitution）を、正式な開発戦略として採用することの決定を記録するものである。
 
-現時点でRepository内にADR-0001に相当する文書は存在せず、Repository Statusにも登録されていない。この点は本ADRのスコープ外の問題として、別途Open Questionとして扱う。
+なお、ADR/ADR-0001_SeparateArchitectureReviewAndPromotionEvaluation.md（Status: Approved, 2026-08-03）は本ADR起票時点で既にRepository内に存在していたが、RepositoryManifest.mdへの登録漏れにより、本ADRの起票時（Session 008）にはADR-0001が存在しないと誤認されていた。この誤認はSession 009のArchitecture Reviewで確認・修正され、RepositoryManifest.mdのADRセクションへ登録済みである。
 
 ---
 
@@ -28,6 +28,8 @@ ReasonOSの開発戦略として、以下を正式に採用する。
 6. Kernel Feedbackの中でも、ReasonOS全体で長期間維持すべき原則に相当するものは、必要に応じてConstitutionへ昇格する。
 
 この開発戦略は、Governance/RepositoryRules.mdが定める「新しい概念を追加する前の検討順序（既存責務で表現できるか→Why/How/What分類→RFC要否→Architecture Review要否→ADR化）」と整合するものとして位置づける。
+
+本ADR固有の責務は、README.mdが示すDevelopment Process（Vision/説明目的の記述）およびGovernance/RepositoryRules.mdが示す検討順序（新規概念追加の可否判断基準）を、Repositoryの開発プロセス全体に対する正式かつ拘束力を持つ意思決定として明文化することにある。README.mdおよびRepositoryRules.mdの記述内容そのものを変更するものではない。
 
 ---
 
@@ -46,8 +48,7 @@ ReasonOSの開発戦略として、以下を正式に採用する。
 
 ## Follow-ups
 
-- ADR-0001が現状Repository Status上に存在しない点の扱いを、Open Questionとして次セッション以降で確認する。
-- 本ADRの内容がArchitecture Review未実施のままDraftである点を、次セッションでReviewしApproved昇格の可否を判断する。
+- 次回Plugin追加または新規概念のRFC起票の際、本ADRが定める開発戦略が実際に機能したかをSession Logで検証する。
 
 ---
 
@@ -70,3 +71,5 @@ Architecture ReviewとADRのステップを省略し、Plugin実装から直接K
 - Governance/ReviewPolicy.md
 - Governance/DocumentLifecycle.md
 - Governance/PromotionPolicy.md
+- ADR/ADR-0001_SeparateArchitectureReviewAndPromotionEvaluation.md
+- Reviews/ADR/ADR-0002_ReasonOSDevelopmentStrategy_Review_v1.0.md
